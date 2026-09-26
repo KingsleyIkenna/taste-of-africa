@@ -1,0 +1,253 @@
+@import url('https://googleapis.com');
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #FFFDF9;
+}
+
+.main-section{
+    margin: 10px 30px 10px 30px;
+}
+
+.title-bar{
+    height: 95px;
+    width: 100%;
+    display: flex;
+    background-color: #eeedec;
+
+    position: -webkit-sticky; /* Safari support */
+    position: sticky;
+    top: 0; /* Tells it to snap exactly to the top of the screen */
+    z-index: 1000;
+    padding: 2px;
+    box-shadow: 10px 100px 40px 50px rgba(0,0,0,0.05);
+}
+
+.title-bar a> .logo{
+    width: 100px;
+    height: 100px;
+    padding-bottom: -10px;
+    border-radius: 50px;
+}
+
+.company-name{
+    margin-left: 10px;
+    margin-top: 55px;
+    width: 450px;
+    font-size: 20px;
+    font-family: 'Condiment', cursive;
+    font-size: 1.8rem;
+    
+    color: #e98c75;
+    letter-spacing: -1px;
+}
+
+.nav-list {
+    margin-left: 800px;
+    margin-top: 45px;
+}
+
+.nav-list-item {
+    float: right;
+    font-size: 17px;
+    margin-left: 18px;
+    list-style: none;
+    color: #810a0a;
+    transition: color 0.2s ease-in-out,
+                font-size 0.2s ease-in-out; 
+
+}
+
+.nav-list-item:hover{
+    color: #810a0a;
+    font-size: 20px;
+}
+
+.nav-list-item a{
+    text-decoration: none;
+    color: #8f5e04;
+}
+
+
+.title-text{
+    color: #86673c;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;  
+}
+
+
+.img-slide{
+    width: 300px;
+    height: 250px;
+    margin-left: 8px;
+}
+
+.member-form{
+    margin-left: 0px;
+}
+
+.Tasty-Time-form-paragraph-intro{
+    margin: -20px 30px 30px 100px;
+    font-size: 22px;
+    font-family: 'roboto' sans-serif;
+}
+
+.Tasty-Time-form-paragraph-intro h3{
+    margin-bottom: -15px;
+}
+
+.line-break{
+    width: 600px;
+    margin-right: 200px;
+}
+
+.form-signup{
+    margin:-20px 0px -70px 20px;
+    
+    color: #2d3748;
+    width: 90%;
+    height: 670px;
+    padding-left: 15px;
+    padding-top: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 20px;
+    border-width: 1px;
+    font-family: 'lora' sans-serif;
+}
+
+.form-signup p{
+    margin-bottom: 2px;
+}
+
+.form-signup input select{
+    border: 2px solid #e2e8f0;
+    color: #1a1a1a;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+}
+
+.form-signup input:focus, .form-signup select:focus{
+    border: 2px solid;
+    border-color: #466b72e1;
+    background-color: #F4F7F5;
+    box-shadow: 5px 5px 5px 5px rgba(43, 56, 59, 0.836);
+}
+
+.email-address, .full-name, .country{
+    width: 500px;
+    height: 48px;
+    border-radius: 15px;
+    padding-left: 20px;
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.email-address{
+    margin-left: 54px;
+}
+
+.country{
+    margin-left: 39px;
+    width: 525px;
+}
+
+.textarea{
+    height: 150px;
+    width: 500px;
+    border-radius: 20px;
+    margin-left: 120px;
+    margin-top: 15px;
+    padding-top: 10px;
+    padding-left: 18px;
+    font-size: 18px;
+    
+}
+
+.submit-button{
+    width: 70%;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #eeedec;
+    color: #6e3903be;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 8px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.submit-button-arrow{
+    transition: transform 0.2s ease-in-out;
+    display: inline-block;
+}
+
+.submit-button:hover{
+    background-color: #e2bcb3e7;
+}
+
+.submit-button:hover .submit-button-arrow{
+    transform: translateX(20px);
+}
+
+/*image sliding from here down*/
+.image-slide-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+    overflow: hidden;
+}
+
+.image-slide {
+    display: flex;
+    width: 100%; /* Spans 3 images wide */
+    height: 100%;
+    /* 15-second infinite loop that slides smoothly from image to image */
+    animation: cuisineSlider 15s ease-in-out infinite;
+}
+
+.img-slide {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+/* The horizontal slider timeline */
+@keyframes cuisineSlider {
+    0%, 25% { transform: translateX(0); }          /* Image 1 */
+    33%, 58% { transform: translateX(-33.333%); }  /* Image 2 */
+    66%, 91% { transform: translateX(-66.666%); }  /* Image 3 */
+    100%     { transform: translateX(0); }          /* Snap back to Image 1 */
+}
+
+.end-nav{
+    height: 95px;
+    width: 100%;
+    background-color: #eeedec;
+}
+
+.end-nav-paragraph{
+    margin-top: 30px;
+    margin-bottom: 0px;
+    margin-left: 35px;
+    font-family: 'inter', sans-serif;
+    font-weight: 700;
+}
+
+.end-nav-images{
+    margin-left: 1350px;
+    width: 40px;
+    border-radius: 60px;
+}
+
+.end-nav-images-container{
+    margin-left: 10px;
+}
