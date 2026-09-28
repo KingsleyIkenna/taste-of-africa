@@ -1,225 +1,66 @@
-@import url('https://googleapis.com');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in here</title>
+    <link rel="stylesheet" href="css/signin.css">
+</head>
+<body>
+    <main class="main-section">
+        <!-----------Navigation bar from other pages here------------->
+        <div class="title-bar">
+            <img class="logo" src="images/food variety.jfif" alt="">
+            
+            <h6 class="company-name">Taste of Africa</h6>
+            <p class="company-slogan">... Kingsley's Tasty-Time Cuisines</p>
+            
+            <ul class="nav-list">
+                <li class="nav-list-item"><a href="signup.html">Sign up</a></li>
+                <li class="nav-list-item"><a href="signin.html">Sign in</a></li>
+            </ul>
+        </div>
 
-body{
-    margin: 0px;
-    padding: 0px;
-    background-color: #fffdf9;
-    font-family: 'robot' sans-serif;
-}
+        <!-----------------page information starts here------------------->
+        <div class="video-container">
+            <video autoplay muted loop playsinline class="background-video">
+                <source src="videos/NIGERIAN PARTY JOLLOF RICE.mp4" type="video/mp4">
+                <source src="videos/Abacha (African Salad) Recipe _ Step-by-Step Nigerian Delicacy.mp4" type="video/mp4">
+                <source src="videos/How to cook rich bitter leaf soup like a pro ! Anambra style ofe onugbu ..mp4" type="video/mp4">
 
-.main-section{
-    margin: 10px 30px 10px 50px;
-}
+                Your browser does not support html5 video
+            </video>
+        </div>
+        <div class="signin-form-container" style="display: grid; grid-template-columns: 1fr 1fr;">
+            <div>
+                <img src="images/we-are=africa.png" class="signin-title">
+                <p class="signin-paragraph">Welcome to chef Kingsley's kitchen</p>
+                <img class="signin-image" src="images/WE ARE AFRICA.jpg" alt="">
+            </div>
+            
+            <div class="signin-form">
+                <form action="signin-form_handler" method="post">
+                    <input class="signin-username" type="text" placeholder="Email address or phone number"> <br>
+                    <input class="signin-password" type="text" placeholder="Password"> <br>
+                    
+                    <a class="signin-forgot-password" href="">forgot password?</a>
+                    
+                    <button class="signin-button" type="submit">
+                        Sign in to join chef Kingsley in the kitchen right away
+                    </button>
+                   
+                    <p class="text-before-crawling-text">
+                    "Your Journey into the Heart of African Flavors Starts Here. Bring Your Appetite, We wll Supply the Secrets. Unlock the Rich, Bold, and Timeless Secrets of True African Cuisine—One Masterclass at a Time." 
+                    <span class="author">Chef Kingsley!</span> 
+                    </p>
 
-.title-bar{
-    height: 95px;
-    width: 100%;
-    display: flex;
-    background-color: #eeedec;
-
-    position: -webkit-sticky; /* Safari support */
-    position: sticky;
-    top: 0; /* Tells it to snap exactly to the top of the screen */
-    z-index: 1000;
-    padding: 2px;
-    box-shadow: 10px 100px 40px 50px rgba(0,0,0,0.05);
-}
-
-.logo{
-    width: 100px;
-    border-radius: 80px;
-}
-
-.company-name{
-    margin-left: 10px;
-    margin-top: 55px;
-    width: 450px;
-    font-size: 20px;
-    font-family: 'Condiment', cursive;
-    font-size: 1.8rem;
+                    <!--------crawling text----------->
+                        <h1 class="crawling-text">Kingsley's Tasty-Time Cuisines</h1>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
     
-    color: #e98c75;
-    letter-spacing: -1px;
-}
-
-.company-slogan{
-    margin-top: 110px;
-    color: #e6b1a1ea;
-    font-family: 'Great Vibes' cursive;
-    font-size: 2.5rem;
-    font-weight: 500;
-    text-align: center;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
-    letter-spacing: 0.5px;
-}
-
-.nav-list {
-    margin-left: 150px;
-    margin-top: 45px;
-}
-
-.nav-list-item {
-    float: right;
-    font-size: 17px;
-    margin-left: 10px;
-    list-style: none;
-    color: #810a0a;
-    transition: color 0.2s ease-in-out,
-                font-size 0.2s ease-in-out; 
-
-}
-
-.nav-list-item:hover{
-    color: #e68e0ade;
-    font-size: 20px;
-}
-
-.nav-list-item a{
-    text-decoration: none;
-    color: #8f5e04;
-}
-
-/*form attributes start here*/
-.video-container{
-    width: 100%;
-    height: 50%;
-    top: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-.background-video{
-    object-fit: cover;
-    border-radius: 22px;
-}
-
-.signin-title{
-    width: 50%;
-    height: 50%;
-    margin-top: -6%;
-    margin-bottom: -6%;
-}
-.signin-paragraph{
-    font-family: 'condiment', cursive;
-    font-size: 1.6rem;
-    color: #831f06f5;
-
-}
-.signin-image{
-    width: 60%;
-    height: 60%;
-    margin-top: -2%;
-    border-radius: 5%;
-
-   
-}
-
-.signin-form-container{
-    margin-top: 5%;
-    margin-left: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-.signin-form{
-    width: 100%;
-    height: 80%;
-    margin-top: 0.04rem;
-    margin-left: -10.5rem;
-    font-family: 'lora' sans-serif;
-    font-size: 1.6rem;
-    border-bottom: 2px solid #f35906f1;
-    
-}
-
-.signin-username, .signin-password{
-    width: 80%;
-    height: 50px;
-    margin-bottom: 1.2rem;
-    border-radius: 1.2rem;
-    padding-left: 1.2rem;
-    font-size: 1.2rem;
-}
-
-.signin-forgot-password{
-    text-decoration: none;
-}
-
-.signin-button{
-    width: 80%;
-    height: 60px;
-    margin-top: 0.5rem;
-    border-radius: 1.7rem;
-    font-family: 'condiment', cursive;
-    font-size: 1.2rem;
-    color: #ffffff;
-    background-color: #f35906f1;
-    cursor: pointer;
-}
-
-.crawling-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 13.5rem;
-    padding: 5px;
-}
-
-.text-before-crawling-text{
-    text-align: left;
-    font-size: 1.35rem;
-    font-family: 'condiment', cursive;
-    line-height: 1.6;
-    max-width: 650px;
-    margin: 35px auto;
-    color: #441a02dc; 
-    font-style: italic;
-    font-weight: 500;
-    border-left: 3px solid #d84315; 
-    padding-left: 15px;
-}
-
-.author{
-    color: #023a5adc;
-}
-
-.crawling-text{
-    font-family: 'condiment', cursive;
-    font-size: 2.3rem;
-    font-weight: 500;
-    color: #d84315;
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: 4px;
-    border-right: 3px solid #d84316;
-
-    /*animation starts here*/
-    animation: 
-        crawl 10s /*steps(30, end)*/ ease-in-out infinite alternate,
-        blink 0.75s step-end infinite;
-}
-
-@keyframes crawl{
-    /*from { width: 0; }
-    to { width: 100%; }*/
-
-    0%, 10% { width: 0; }
-    45%, 55% { width: 100%; }
-    90%, 100% { width: 0;}
-}
-
-@keyframes  blink {
-    from, to { border-color: transparent; }
-    50% { border-color: #d84315; }
-}
-
-/*make it mobile friendly- responsive wen design*/
-@media (max-width: 600px){
-    .crawling-text{
-        font-size: 1.6rem;
-    }
-}
+</body>
+</html>
